@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bookmarklet Parts</title>
+<style>
+body{font-family:system-ui;background:#0f0f14;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+.card{background:#181826;padding:32px 40px;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center}
+.btn{display:inline-block;margin:12px;padding:14px 22px;border-radius:12px;background:linear-gradient(135deg,#7c7cff,#b48cff);color:#000;font-weight:600;text-decoration:none;cursor:grab}
+.hint{opacity:.7;font-size:13px;margin-top:8px}
+.instructions{margin-top:14px;opacity:.85;font-size:13px;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>contra</h2>
+  <a class="btn" id="p1" href="#">Part I</a>
+  <a class="btn" id="p2" href="#">Part II</a>
+  <div class="hint">drag each to bookmarks bar</div>
+	  <div class="instructions">
+		<strong>instructions:</strong><br>
+		run I on the talkometer page and copy the all the text that appears.<br>
+		run II on graded practice and paste into "paste list here." modify settings and enjoy!
+	</div>
+</div>
+<script>
+function makeBookmarklet(el, code){
+  if (!code.trim().toLowerCase().startsWith('javascript:')) {
+    code = 'javascript:' + code;
+  }
+  el.href = code;
+}
+// === EDIT BELOW ===
+// replace the code inside the quotes with your own javascript
+makeBookmarklet(p1, "javascript:javascript%3A(function()%7Blet prompts%3D%5B%5D%3Blet translations%3D%5B%5D%3Blet trs%3Ddocument.querySelectorAll('tr')%3Btrs.forEach(tr%3D>%7Blet tds%3Dtr.querySelectorAll('td')%3Bif(tds.length>%3D2)%7Bprompts.push(tds%5B0%5D.textContent.trim())%3Btranslations.push(tds%5B1%5D.textContent.trim())%3B%7D%7D)%3Bif(prompts.length%3D%3D%3D0)%7Balert('No table rows with at least two cells found')%3Breturn%3B%7Dlet div%3Ddocument.createElement('div')%3Bdiv.style.position%3D'fixed'%3Bdiv.style.top%3D'10px'%3Bdiv.style.right%3D'10px'%3Bdiv.style.background%3D'white'%3Bdiv.style.padding%3D'20px'%3Bdiv.style.border%3D'1px solid black'%3Bdiv.style.zIndex%3D'9999'%3Bdiv.style.maxHeight%3D'80vh'%3Bdiv.style.overflow%3D'auto'%3Bdiv.style.boxShadow%3D'0 0 10px rgba(0%2C0%2C0%2C0.5)'%3Blet content%3D'<table><tbody>'%3Bprompts.forEach((p%2Ci)%3D>%7Bcontent%2B%3D%60<tr><td>%24%7Bi%2B1%7D. %24%7Bp%7D<%2Ftd><td>%24%7Bi%2B1%7D. %24%7Btranslations%5Bi%5D%7D<%2Ftd><%2Ftr>%60%3B%7D)%3Bcontent%2B%3D'<%2Ftbody><%2Ftable>'%3Bdiv.innerHTML%3Dcontent%3Bdocument.body.appendChild(div)%3B%7D)()%3B");
+// replace the code inside the quotes with your own javascript
+makeBookmarklet(p2, "javascript:(function(){var s=document.createElement('script');s.src='https://raw.githubusercontent.com/ThatOneWeirdDev/contra/refs/heads/main/part2.js';document.body.appendChild(s);})();");
+</script>
+</body>
+</html>
