@@ -1,4 +1,14 @@
+
 # contra
-Working Conjuguemos hacks in 2026.
-run I on the talkometer page and copy the all the text that appears
-run II on graded practice and paste into "paste list here." modify settings and enjoy!
+
+The first working Conjuguemos hacks of 2026.
+
+
+## Instructions
+Both JS files included in the project are bookmarklets. 
+
+Copy and paste each into their own individual bookmarks under the URL section. 
+
+Go to the lesson you want to use contra on and click on "talkometer." On that page, run bookmarklet I. 
+
+Then, go to the graded practice, set up the built-in instructions and then run II. Modify those options and enjoy!
