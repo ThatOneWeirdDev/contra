@@ -12,3 +12,6 @@ Copy and paste each into their own individual bookmarks under the URL section.
 Go to the lesson you want to use contra on and click on "talkometer." On that page, run bookmarklet I. 
 
 Then, go to the graded practice, set up the built-in instructions and then run II. Modify those options and enjoy!
+
+## Demo
+![](https://github.com/ThatOneWeirdDev/contra/blob/main/demo.gif)
