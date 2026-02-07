@@ -15,3 +15,6 @@ Then, go to the graded practice, set up the built-in instructions and then run I
 
 ## Demo
 ![](https://github.com/ThatOneWeirdDev/contra/blob/main/demo.gif)
+
+
+Contact me directly for your personal user code.
