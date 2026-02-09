@@ -16,5 +16,7 @@ Then, go to the graded practice, set up the built-in instructions and then run I
 ## Demo
 ![](https://github.com/ThatOneWeirdDev/contra/blob/main/demo.gif)
 
+## Infinite Mode
+Infinite mode means it will continue running (with the delay) indefinitely with all correct answers.
 
 Contact me directly for your personal user code.
